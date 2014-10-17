@@ -1,0 +1,56 @@
+[img]http://www.firsttimer.ca/images/firsttimer-logo.png[/img]
+[url=http://www.firsttimer.ca][b][color=#3399FF]http: Get things done yourself!
+
+http://blog.jhrx.cn/blog/21865/1605.html
+
+./magic.php:    showmessage('not_loggedin', NULL, 'HALTED');
+./medal.php:    showmessage('not_loggedin', NULL, 'HALTED');
+./memcp.php:    showmessage('not_loggedin', NULL, 'HALTED');
+./misc.php:                     showmessage('not_loggedin', NULL, 'NOPERM');
+./misc.php:             showmessage('not_loggedin', NULL, 'HALTED');
+./my.php:       showmessage('not_loggedin', NULL, 'NOPERM');
+./pm.php:       showmessage('not_loggedin', NULL, 'HALTED');
+./task.php:             showmessage('not_loggedin', NULL, 'NOPERM');
+./task.php:             showmessage('not_loggedin', NULL, 'NOPERM');
+./templates/default/messages.lang.php:  'not_loggedin' => 'Sorry, You are not lo
+gged in and do not have permission to access this page.',
+./templates/default/wap.lang.php:       'not_loggedin' => 'Please Login',
+./trade.php:    showmessage('not_loggedin', NULL, 'NOPERM');
+./wap/include/my.inc.php:       wapmsg('not_loggedin');
+
+
+222 100
+[FYI] Why we don't support direct upload and conversion of FLV videos
+
+The simple answer is that we do not have MONEY:'( 
+
+A tool you need to know: [b]ffmpeg[/b]: [url]http://ffmpeg.mplayerhq.hu/[/url]
+
+To support a ffmpeg flv webhosting needs MONEY (it requires from $200 to $1000 per month), since it requires high CPU usage.
+
+We really need your support NOW to convert and upload your firsttimer video to FirstTimer.ca, once we have enough users and videos, we will look forward to renting a high quality server to support all the features a video sharing website needs to have! [color=Red][b]Please Help! Thanks a lot! [/b][/color]:victory: :handshake 
+
+What do you think of the ideas of this website?
+We want to start a company to implement our firsttimer website idea. Do you guys think it will success? Really need to hear from you! Thanks a lot! 
+
+ffmpeg -i test.mpg -ab 56 -ar 22050 -b 500 -r 15 -s 320x240 test.flv
+
+[FYI] How to create a FLV video thumb
+
+INTRO: A video thumb is a picture captured from your video. It could be at any time frame of the video.
+
+A tool you need to know: [b]ffmpeg[/b]: [url]http://ffmpeg.mplayerhq.hu/[/url]
+
+Q: Why we need to upload video thumb ourselves?
+A: To support a ffmpeg webhosting needs MONEY, currently we are using a free webhosting for this website which does not support [b]ffmpeg[/b] (since it requies high CPU usage).
+
+Q: How to generate a thumb from your FLV video?
+A: I have windows version binary build of ffmpeg avaiable here for you guys to download: [url]http://tianye.110mb.com/tools/ffmpeg.zip[/url]
+Copy it to the folder where your FLV video is located, and execute the following command in the windows CMD:
+[b]ffmpeg -i "videofilename.flv" -y -f image2 -ss 8 -t 0.001 -s 350x240 "thumbname.jpg(or gif)"[/b]
+
+check out the ffmpeg doc webpage: [url]http://ffmpeg.mplayerhq.hu/ffmpeg-doc.html[/url] or just type "[b]ffmpeg[/b]" in your windows CMD to show all the ffmpeg options.
+
+There is also a small and neat windows GUI application that is easily to use for generating thumbs from videos: [url]http://www.im-research.org/im-flv-thumbnail[/url] however, if you just use the "DEMO" version, there will be an ad banner in between of the thumb being generated from your video.
+
+Once again, I appreciate your support of taking these steps to upload your videos. Your videos is critical to the success of this website. Once we are in a "shape", we will switch to a web hosting that fully support video stream features. Thanks a lot!:handshake :hug:
