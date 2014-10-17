@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="FLV, HD, MP4, help, video, Howto, First Time" name="Keywords" />
+<meta content="convert your firsttime video!" name="Description" />
+<title>Convert Video</title>
+<link rel="stylesheet" href="../images/ftstyle2.0.css" type="text/css" />
+</head>
+
+<style type="text/css">
+body {
+	margin: 0; 	padding: 0;
+	font: normal 73%/1.5em 'Trebuchet MS', Tahoma, sans-serif;
+	background:none;
+	text-align: left;
+}
+</style>
+
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.4.1/build/assets/skins/sam/skin.css">
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/utilities/utilities.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.4.1/build/container/container-min.js"></script>
+<script type="text/javascript" src="loadingpanel.js"></script>
+<script type="text/javascript">
+var loadingPanel = new yuiLoadingPanel();
+</script>
+<script type="text/javascript">
+function isblank(s)
+{
+  for(var i = 0; i < s.length; i++)
+  {
+     var c = s.charAt(i);
+     if ((c != ' ') &&
+         (c != '\n') &&
+         (c != '\t'))
+        return false;
+  }
+  return true;
+}
+
+function verify(f)
+{
+  for(var i = 0; i < f.length; i++)
+  {
+     var e = f.elements[i];
+	 
+	 if (e.type == "file")
+	 {
+	    if (e.name == "videocon" && (e.value == null || e.value == "" || isblank(e.value)))
+		{
+		   alert("Error: No video file selected!\n");
+           return false;	
+	    }
+	 }
+  }
+loadingPanel.show();
+return true;
+}
+</script>
+<p align="center"><img src="../images/icons/Windows Movie Maker.png" alt="Video" style="width:32px; height:32px; border:0; margin:0"/><a href="http://www.firsttimer.ca" target="_parent" title="Go to FirstTimer.ca"><img src="../images/firsttimer-logo.png" style="width:151px; height:50px; border:0; margin:0" /></a><img src="../images/icons/Windows Movie Maker.png" alt="Video" style="width:32px; height:32px; border:0; margin:0"/><br />
+<span style="color: #06F;">Note: It will take about 3 - 10 mins to covert the video depending on the video file size and your internet speed. Please be patient! <br />
+          Thanks!</span></p>
+    <div align="center">
+    <form onsubmit="return(verify(this));" enctype="multipart/form-data" name=formConvert method=post action='http://www.flvencoder.com/iframed/convert.php'>
+            <input type="hidden" name="MAX_FILE_SIZE" value="500000000">
+            <input size=50 type="file" name="videocon" id="videocon" enctype="multipart/form-data">
+            <br />
+            <br />
+            <select name="type">
+              <option value="flv">to FLV</option>
+              <option value="mp4">to MP4</option>
+              <option value="mp4hd">to MP4 HD</option>
+            </select>            
+            <input class="button" type="submit" value="CONVERT VIDEO" >
+            <br /><br />
+            <span style="font:bold">Convert / Encode  to FLV or Compress HD to MP4 - Choose in drop down box (Must be Hi Def input to get HD output)</span>
+          <ul>
+            <li><span style="color: #F00;">Max Size 100 MB.</span></li></ul>
+ </form>    
+ </div>
+</body>
+</html>
